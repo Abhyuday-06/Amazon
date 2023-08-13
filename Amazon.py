@@ -11,7 +11,7 @@ def download_data(url):
     page_html = response.read()
     response.close()
     soup = BeautifulSoup(page_html,'html.parser')
-    containers = soup.findAll('div', {'class':'a-section a-spacing-medium'})
+    containers = soup.findAll('div', {'class':'a-section a-spacing-small a-spacing-top-small'})
     cnt = len(containers)
     for i in range(0,cnt):
         print(i + 1, '--------')
